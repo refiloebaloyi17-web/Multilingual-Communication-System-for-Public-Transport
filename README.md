@@ -12,27 +12,42 @@ Language Selection — Supports multiple South African languages (English, isiZu
 Cross-Platform App — Built with React Native (Expo) for mobile and FastAPI for the backend.
 
 System Architecture
+
 Frontend (Mobile App):
+
 Developed with React Native (Expo)
+
 Handles UI, recording, playback, and user interaction
+
 Communicates with the backend via REST API calls
 
 Backend (Server):
+
 Built with FastAPI
+
 Provides routes for:
 /auth/register and /auth/login
+
 /speech-to-text for audio processing
+
 /translate/text for text translation
+
 Uses googletrans, pydub, and speech_recognition libraries
 
 Database:
+
 SQLite (via SQLModel)
+
 Stores user profiles and authentication tokens
 
 Workflow
+
 Driver registers and logs in through the mobile app.
+
 Driver selects the preferred target language.
+
 When the driver speaks, the system:
+
 Records the audio (.m4a)
 Sends it to the backend (/speech-to-text)
 Converts to .wav and performs speech recognition
